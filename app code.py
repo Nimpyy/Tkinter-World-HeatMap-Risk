@@ -11,11 +11,11 @@ import matplotlib.colors as colors
 import country_converter as coco
 matplotlib.use("TkAgg")
 
-sources = pd.read_csv(r"C:\Users\EstelleRuellan\Desktop\PERSO\project cyber\7sources.csv", encoding = 'ISO-8859-1')
+sources = pd.read_csv(r"path to 7sources.csv", encoding = 'ISO-8859-1')
 colsource = list(sources.columns.values)
 df = pd.read_csv('data.csv', encoding = 'ISO-8859-1')
 cols = list(df.columns.values)
-SHAPEFILE = r'C:\Users\EstelleRuellan\Desktop\PERSO\project cyber\shape'
+SHAPEFILE = r'path to shapefile'
 geo_df = gpd.read_file(SHAPEFILE)[['ADMIN', 'ADM0_A3', 'geometry']]
 geo_df_columns = ['country', 'CODE', 'GEONMETRY']
 geo_df = geo_df.drop(geo_df.loc[geo_df['ADMIN'] == 'Antarctica'].index)
@@ -37,6 +37,7 @@ app.iconbitmap("Thresh.ico")
 
 bounds = (0,1,7,14,21)
 
+#button functions
 def cyber():
     global R 
     global X 
@@ -134,7 +135,7 @@ def comparaison():
     if var.get() == 0 :
         drop2.grid_forget()
 
-
+#function compare button
 def ShowTwo(pays):
     t2.delete(1.0, END)
     pays2 = clicked2.get()
@@ -146,7 +147,7 @@ def ShowTwo(pays):
             t2.insert(END, s) 
                     
 
-
+# Display countries' stats
     sys.stdout = PrintTot2() 
     for i in range(len(sources[colsource[0]])):
         if sources[colsource[0]][i] == clicked2.get().upper():
@@ -177,7 +178,7 @@ def ShowOne(pays):
             t1.insert(END, s) 
                     
 
-
+# Display country's stats
     sys.stdout = PrintToT1() 
     for i in range(len(sources[colsource[0]])):
         if sources[colsource[0]][i] == clicked.get().upper():
