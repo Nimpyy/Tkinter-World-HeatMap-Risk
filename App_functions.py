@@ -1,3 +1,5 @@
+#This piece of code contains all the functions to the various buttons, optionMenus, etc ... as well as the displaying function 
+
 #score thresholds for the colormap
 bounds = (0,1,7,14,21)
 
