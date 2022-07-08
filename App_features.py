@@ -1,4 +1,4 @@
-#This piece of code contains all the functions to the various buttons, optionMenus, etc ... as well as the displaying fuction 
+#This piece of code declares all the buttons, frames an OptionMenu as well as the icon used for the app
 
 from tkinter import *
 
