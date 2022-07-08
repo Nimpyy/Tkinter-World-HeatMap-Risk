@@ -1,3 +1,5 @@
+#This piece of code contains all the functions to the various buttons, optionMenus, etc ... as well as the displaying fuction 
+
 from tkinter import *
 
 # Create a GUI app
