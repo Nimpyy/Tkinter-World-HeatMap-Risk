@@ -11,9 +11,9 @@ import matplotlib.colors as colors
 import country_converter as coco
 matplotlib.use("TkAgg")
 
-sources = pd.read_csv(r"path to your data", encoding = 'ISO-8859-1')
+sources = pd.read_csv(r"path to data sample", encoding = 'ISO-8859-1')
 colsource = list(sources.columns.values)
-df = pd.read_csv('data.csv', encoding = 'ISO-8859-1')
+df = pd.read_csv('Total_Score_Countries_Sample', encoding = 'ISO-8859-1')
 cols = list(df.columns.values)
 SHAPEFILE = r'path to shapefile'
 geo_df = gpd.read_file(SHAPEFILE)[['ADMIN', 'ADM0_A3', 'geometry']]
