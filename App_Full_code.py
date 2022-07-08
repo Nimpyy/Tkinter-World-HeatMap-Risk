@@ -11,7 +11,7 @@ import matplotlib.colors as colors
 import country_converter as coco
 matplotlib.use("TkAgg")
 
-sources = pd.read_csv(r"path to 7sources.csv", encoding = 'ISO-8859-1')
+sources = pd.read_csv(r"path to your data", encoding = 'ISO-8859-1')
 colsource = list(sources.columns.values)
 df = pd.read_csv('data.csv', encoding = 'ISO-8859-1')
 cols = list(df.columns.values)
